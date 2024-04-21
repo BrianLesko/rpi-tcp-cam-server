@@ -42,7 +42,7 @@ This will start the video stream transmission
 
 ## About
 
-    This code is written for use with the bash (bourne again shell) language for use with a linux camera server running libcamera and rpicam-apps and a client that has ffmpeg installed. 
+This code is written for use with the bash (bourne again shell) language for use with a linux camera server running libcamera and rpicam-apps and a client that has ffmpeg installed. 
 
 &nbsp;
 
