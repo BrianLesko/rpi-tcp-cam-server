@@ -1,7 +1,8 @@
 
-# Camera Stream
+# TCP Camera Stream
 
-The camera stream here is optimized for high framerate low latency real time video served over UDP. Built off libcamera and rpicam-apps, linux libraries. 
+The camera stream here is optimized for high framerate low latency video served over tcp. We drop denoising the image in favor of lower latency.
+Built off libcamera and rpicam-apps, linux libraries. 
 
 &nbsp;
 
