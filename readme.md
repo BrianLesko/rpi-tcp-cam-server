@@ -3,6 +3,9 @@
 
 The video stream here is easy to implement and came in at about 240ms of latency. This repository is one in several aimed at testing the different options for [streaming video from a raspberry pi](https://www.raspberrypi.com/documentation/computers/camera_software.html#tcp) with raspberry pi camera module V3. 
 
+Using the same raspberry pi source for testing UDP resulted in latency between 120ms, but it had the tendency to aggregate a buffer even with no buffer flags. 
+
+
 ![Latency Analysis](latency.jpg)
 
 &nbsp;
