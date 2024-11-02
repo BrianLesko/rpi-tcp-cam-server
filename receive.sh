@@ -14,4 +14,4 @@ fi
 # Use the provided IP address
 IP=$1
 
-ffplay tcp://$IP:8000 -vf "colorchannelmixer=rr=0:rb=1:br=1:bb=0, setpts=N/30" -fflags nobuffer -flags low_delay -framedrop
+ffplay tcp://$IP:8000 -vf "setpts=N/30" -fflags nobuffer -flags low_delay -framedrop -probesize 32 -analyzeduration 0
