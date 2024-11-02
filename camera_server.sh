@@ -5,4 +5,6 @@
 # 4/20/2024
 # Built off rpicam-apps and libcamera
 
-rpicam-vid --level 4.2 --framerate 100 --width 1280 --height 720 -t 0 --inline --listen -o tcp://0.0.0.0:8000 --denoise cdn_off -n
+rpicam-vid --level 4.2 --framerate 100 --width 1280 --height 720 -t 0 --inline --listen -o tcp://0.0.0.0:8000 --denoise cdn_off -n &
+
+echo "SSID: $(iwgetid -r), IP: $(hostname -I | awk '{print $1}')"
