@@ -32,6 +32,10 @@ chmod +x receive.sh
 ./camera_server.sh
 ```
 The IP will be printed after running
+If there is a process on port 8000 already you can kill it with 
+```
+sudo kill -9 $(sudo lsof -t -i :8000)
+```
 
 4. run the client script on your recieving device and pass in the IP printed from the server.
 ```
