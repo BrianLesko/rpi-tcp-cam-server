@@ -1,8 +1,9 @@
 
-# TCP Camera Stream
+# TCP Camera Stream for Raspberry Pi 
 
-The camera stream here is optimized for high framerate low latency video served over tcp. We drop denoising the image in favor of lower latency.
-Built off libcamera and rpicam-apps, linux libraries. 
+Testing the different options for [streaming video from a raspberry pi](https://www.raspberrypi.com/documentation/computers/camera_software.html#tcp) with raspberry pi camera module V3. 
+
+![Latency Analysis](latency.jpg)
 
 &nbsp;
 
