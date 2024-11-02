@@ -19,15 +19,37 @@ This code uses the following libraries:
 Mipi camera interface
 
 ## Usage
-1. Clone this repository to your server device and client device
+1. Have a raspberry pi with rpi camera plugged in, powered up.
+2. Update and upgrade the rpi. Then run
+```
+sudo nano /boot/firmware/config.txt
+```
+and add the line 
+```
+start_x=1
 
-2. Make sure the scripts are executable by running these commands on both devices
+```
+
+3. Add your user to the camera group and then reboot
+```
+sudo usermod -aG video lesko
+sudo reboot
+```
+
+4.Then check if the camera is detected.
+```
+vcgencmd get_camera
+```
+
+5. Clone this repository to your server device and client device
+
+6. Make sure the scripts are executable by running these commands on both devices
 ```
 chmod +x camera_server.sh
 chmod +x receive.sh
 ```
 
-3. run the bash script on your camera server device
+7. run the bash script on your camera server device
 ```
 ./camera_server.sh
 ```
@@ -37,7 +59,7 @@ If there is a process on port 8000 already you can kill it with
 sudo kill -9 $(sudo lsof -t -i :8000)
 ```
 
-4. run the client script on your recieving device and pass in the IP printed from the server.
+8. run the client script on your recieving device and pass in the IP printed from the server.
 ```
 ./receive.sh IP
 ```
