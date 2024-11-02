@@ -19,22 +19,23 @@ This code uses the following libraries:
 Mipi camera interface
 
 ## Usage
-1. determine the IP address on your camera server device 
+1. Clone this repository to your server device and client device
+
+2. Make sure the scripts are executable by running these commands on both devices
 ```
-hostname -I
+chmod +x camera_server.sh
+chmod +x receive.sh
 ```
 
-1. run the bash script on your camera server device
+3. run the bash script on your camera server device
 ```
 ./camera_server.sh
 ```
+The IP will be printed after running
 
-2. Edit the stream IP in the receive.sh file
-tcp://**172.20.10.3**
-
-2. run the client script on your recieving device
+4. run the client script on your recieving device and pass in the IP printed from the server.
 ```
-./receive.sh
+./receive.sh IP
 ```
 
 This will start the video stream transmission
